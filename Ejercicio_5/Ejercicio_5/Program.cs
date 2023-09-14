@@ -22,6 +22,8 @@ for (int i = 1; i < numero + 1; i+=2)
 
 }
 
+
+
 Console.WriteLine("Suma del enunciado: {0}", 4*suma1);
 Console.WriteLine("Suma correcta: {0}", suma2);
 Console.WriteLine("Diferencia: {0}", suma2 - suma1);
