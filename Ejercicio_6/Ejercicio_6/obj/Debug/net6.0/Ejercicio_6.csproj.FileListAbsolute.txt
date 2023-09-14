@@ -1,0 +1,14 @@
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\bin\Debug\net6.0\Ejercicio_6.exe
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\bin\Debug\net6.0\Ejercicio_6.deps.json
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\bin\Debug\net6.0\Ejercicio_6.runtimeconfig.json
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\bin\Debug\net6.0\Ejercicio_6.dll
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\bin\Debug\net6.0\Ejercicio_6.pdb
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\obj\Debug\net6.0\Ejercicio_6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\obj\Debug\net6.0\Ejercicio_6.AssemblyInfoInputs.cache
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\obj\Debug\net6.0\Ejercicio_6.AssemblyInfo.cs
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\obj\Debug\net6.0\Ejercicio_6.csproj.CoreCompileInputs.cache
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\obj\Debug\net6.0\Ejercicio_6.dll
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\obj\Debug\net6.0\refint\Ejercicio_6.dll
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\obj\Debug\net6.0\Ejercicio_6.pdb
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\obj\Debug\net6.0\Ejercicio_6.genruntimeconfig.cache
+C:\Users\Alumno\OneDrive\DAM\Programacion\c#\Ejercicio_6\Ejercicio_6\obj\Debug\net6.0\ref\Ejercicio_6.dll

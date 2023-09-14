@@ -33,8 +33,10 @@ for (int i = 1; i < numero + 1; i += 2)
 }
 
 Console.WriteLine("Suma del enunciado: {0}", Math.Abs(4 * suma1));
-Console.WriteLine("Suma correcta: {0}", suma2);
+Console.WriteLine("Suma correcta: {0}", 2*suma2);
 Console.WriteLine("Diferencia: {0}", suma2 - suma1);
+Console.WriteLine();
+Console.WriteLine("La segunsa es mas precisa pero necesita de muchos mas mas operaciones para mostrar el numero pi");
 
 static double CalcularFactorial(int n)
 {
