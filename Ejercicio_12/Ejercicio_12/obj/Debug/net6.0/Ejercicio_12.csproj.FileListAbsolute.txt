@@ -1,0 +1,14 @@
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\obj\Debug\net6.0\Ejercicio_12.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\obj\Debug\net6.0\Ejercicio_12.AssemblyInfoInputs.cache
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\obj\Debug\net6.0\Ejercicio_12.AssemblyInfo.cs
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\obj\Debug\net6.0\Ejercicio_12.csproj.CoreCompileInputs.cache
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\bin\Debug\net6.0\Ejercicio_12.exe
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\bin\Debug\net6.0\Ejercicio_12.deps.json
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\bin\Debug\net6.0\Ejercicio_12.runtimeconfig.json
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\bin\Debug\net6.0\Ejercicio_12.dll
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\bin\Debug\net6.0\Ejercicio_12.pdb
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\obj\Debug\net6.0\Ejercicio_12.dll
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\obj\Debug\net6.0\refint\Ejercicio_12.dll
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\obj\Debug\net6.0\Ejercicio_12.pdb
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\obj\Debug\net6.0\Ejercicio_12.genruntimeconfig.cache
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Ejercicio_12\Ejercicio_12\obj\Debug\net6.0\ref\Ejercicio_12.dll
