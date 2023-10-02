@@ -440,12 +440,14 @@ class Program
 
     private static void despedida()
     {
-        Console.WriteLine(" ____  _                           _     _                   __  __       _        _      ");
-        Console.WriteLine("|  _ \\(_)                         (_)   | |                 |  \\/  |     | |      (_)     ");
-        Console.WriteLine("| |_) |_  ___ _ ____   _____ _ __  _  __| | ___      __ _   | \\  / | __ _| |_ _ __ ___  __");
-        Console.WriteLine("|  _ <| |/ _ \\ '_ \\ \\ / / _ \\ '_ \\| |/ _` |/ _ \\    / _` |  | |\\/| |/ _` | __| '__| \\ \\/ /");
-        Console.WriteLine("| |_) | |  __/ | | \\ V /  __/ | | | | (_| | (_) |  | (_| |  | |  | | (_| | |_| |  | |>  < ");
-        Console.WriteLine("|____/|_|\\___|_| |_|\\_/ \\___|_| |_|_|\\__,_|\\___/    \\__,_|  |_|  |_|\\__,_|\\__|_|  |_/_/\\_\\");
+        Console.WriteLine(" ______ _                          __  ");
+        Console.WriteLine(" |  ____(_)                    _    \\ \\ ");
+        Console.WriteLine(" | |__   _ _ __               (_)    | |");
+        Console.WriteLine(" |  __| | | '_ \\                     | |");
+        Console.WriteLine(" | |    | | | | |              _     | |");
+        Console.WriteLine(" |_|    |_|_| |_|             (_)    | |");
+        Console.WriteLine("                                    /_/ ");
+
     }
 }
 

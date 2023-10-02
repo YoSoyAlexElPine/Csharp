@@ -1,0 +1,14 @@
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\bin\Debug\net6.0\Matrix_2.exe
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\bin\Debug\net6.0\Matrix_2.deps.json
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\bin\Debug\net6.0\Matrix_2.runtimeconfig.json
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\bin\Debug\net6.0\Matrix_2.dll
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\bin\Debug\net6.0\Matrix_2.pdb
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\obj\Debug\net6.0\Matrix_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\obj\Debug\net6.0\Matrix_2.AssemblyInfoInputs.cache
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\obj\Debug\net6.0\Matrix_2.AssemblyInfo.cs
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\obj\Debug\net6.0\Matrix_2.csproj.CoreCompileInputs.cache
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\obj\Debug\net6.0\Matrix_2.dll
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\obj\Debug\net6.0\refint\Matrix_2.dll
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\obj\Debug\net6.0\Matrix_2.pdb
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\obj\Debug\net6.0\Matrix_2.genruntimeconfig.cache
+C:\Users\alex\OneDrive\DAM\Programacion\c#\Matrix_2\Matrix_2\obj\Debug\net6.0\ref\Matrix_2.dll
