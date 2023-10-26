@@ -1,0 +1,9 @@
+﻿<Application x:Class="Elecciones.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Elecciones"
+             StartupUri="Window1.xaml">
+    <Application.Resources>
+        <!-- Puedes definir recursos de aplicación aquí si es necesario -->
+    </Application.Resources>
+</Application>

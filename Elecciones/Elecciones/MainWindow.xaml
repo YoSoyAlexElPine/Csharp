@@ -1,0 +1,89 @@
+﻿<Window x:Class="Elecciones.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Elecciones"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <TabControl TabStripPlacement="Left">
+            <TabItem Header="Previous Data">
+                <StackPanel >
+                    <Grid HorizontalAlignment="Right" Margin="0,0,0,-6" Width="671" Height="434">
+                        <Label Content="Madrid Elecctions" Margin="181,22,86,329" FontSize="36" FontWeight="Bold"/>
+                        <Label Content="Population" HorizontalAlignment="Left" Margin="181,111,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+                        <Label Content="Abstenctions votes" HorizontalAlignment="Left" Margin="181,162,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+                        <Label Content="Null votes" HorizontalAlignment="Left" Margin="181,217,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+                        <TextBox x:Name="tb_population" HorizontalAlignment="Left" Margin="371,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="35" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus"  />
+                        <TextBox x:Name="tb_abstentionsVotes" HorizontalAlignment="Left" Margin="371,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="35" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus" />
+                        <TextBox x:Name="tb_nullVotes" HorizontalAlignment="Left" Margin="371,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="35" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus" />
+                        <Button x:Name="b_save" Content="Save" HorizontalAlignment="Left" Margin="437,286,0,0" VerticalAlignment="Top" Height="29" Width="57" Click="b_save_Click"/>
+
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem  x:Name="tabItem2" Header="Parties Management">
+                <StackPanel>
+                    <Grid HorizontalAlignment="Right" Margin="0,0,0,-6" Width="671" Height="434">
+                        <!-- Etiquetas -->
+                        <Label Content="Votes" HorizontalAlignment="Left" Margin="237,10,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+
+                        <Label Content="Team 1" HorizontalAlignment="Left" Margin="97,55,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                        <Label Content="Team 2" HorizontalAlignment="Left" Margin="97,85,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                        <Label Content="Team 3" HorizontalAlignment="Left" Margin="97,115,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                        <Label Content="Team 4" HorizontalAlignment="Left" Margin="96,144,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                        <Label Content="Team 5" HorizontalAlignment="Left" Margin="96,174,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                        <Label Content="Team 6" HorizontalAlignment="Left" Margin="97,204,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                        <Label Content="Team 7" HorizontalAlignment="Left" Margin="97,234,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                        <Label Content="Team 8" HorizontalAlignment="Left" Margin="97,264,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                        <Label Content="Team 9" HorizontalAlignment="Left" Margin="97,294,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                        <Label Content="Team 10" HorizontalAlignment="Left" Margin="96,324,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+
+                        <!-- Cuadros de texto -->
+                        <TextBox x:Name="tb_team1" HorizontalAlignment="Left" Margin="184,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus2"/>
+                        <TextBox x:Name="tb_team2" HorizontalAlignment="Left" Margin="184,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus2"/>
+                        <TextBox x:Name="tb_team3" HorizontalAlignment="Left" Margin="184,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus2"/>
+                        <TextBox x:Name="tb_team4" HorizontalAlignment="Left" Margin="184,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus2"/>
+                        <TextBox x:Name="tb_team5" HorizontalAlignment="Left" Margin="184,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus2"/>
+                        <TextBox x:Name="tb_team6" HorizontalAlignment="Left" Margin="184,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus2"/>
+                        <TextBox x:Name="tb_team7" HorizontalAlignment="Left" Margin="184,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus2"/>
+                        <TextBox x:Name="tb_team8" HorizontalAlignment="Left" Margin="184,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus2"/>
+                        <TextBox x:Name="tb_team9" HorizontalAlignment="Left" Margin="184,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus2"/>
+                        <TextBox x:Name="tb_team10" HorizontalAlignment="Left" Margin="184,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  LostFocus="TextBox_LostFocus2"/>
+
+                        <Button x:Name="Calculate" Content="Calculate" HorizontalAlignment="Left" Margin="232,384,0,0" VerticalAlignment="Top" Height="29" Width="56" Click="Calculate_Click"/>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+            <TabItem x:Name="tabItem3" Header="Simulation" Height="24" Margin="0,0,-2,0" VerticalAlignment="Top">
+                <Grid HorizontalAlignment="Right" Margin="0,0,0,-6" Width="671" Height="434">
+                    <Label Content="Team 1" HorizontalAlignment="Left" Margin="97,55,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                    <Label Content="Seats" HorizontalAlignment="Left" Margin="195,10,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                    <Label Content="Team 2" HorizontalAlignment="Left" Margin="97,85,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                    <Label Content="Team 3" HorizontalAlignment="Left" Margin="97,115,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                    <Label Content="Team 4" HorizontalAlignment="Left" Margin="96,144,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                    <Label Content="Team 5" HorizontalAlignment="Left" Margin="96,174,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                    <Label Content="Team 6" HorizontalAlignment="Left" Margin="97,204,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                    <Label Content="Team 7" HorizontalAlignment="Left" Margin="97,234,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                    <Label Content="Team 8" HorizontalAlignment="Left" Margin="97,264,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                    <Label Content="Team 9" HorizontalAlignment="Left" Margin="97,294,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                    <Label Content="Team 10" HorizontalAlignment="Left" Margin="96,324,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                    <Label x:Name="seats1" Content="Team 1" HorizontalAlignment="Left" Margin="190,55,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label x:Name="seats2" Content="Team 1" HorizontalAlignment="Left" Margin="190,85,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label x:Name="seats3" Content="Team 1" HorizontalAlignment="Left" Margin="190,115,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label x:Name="seats4" Content="Team 1" HorizontalAlignment="Left" Margin="190,144,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label x:Name="seats5" Content="Team 1" HorizontalAlignment="Left" Margin="190,174,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label x:Name="seats6" Content="Team 1" HorizontalAlignment="Left" Margin="190,204,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label x:Name="seats7" Content="Team 1" HorizontalAlignment="Left" Margin="190,234,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label x:Name="seats8" Content="Team 1" HorizontalAlignment="Left" Margin="190,264,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label x:Name="seats9" Content="Team 1" HorizontalAlignment="Left" Margin="190,294,0,0" VerticalAlignment="Top" FontSize="14"/>
+                    <Label x:Name="seats10" Content="Team 1" HorizontalAlignment="Left" Margin="190,324,0,0" VerticalAlignment="Top" FontSize="14"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+
+
+</Window>
