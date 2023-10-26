@@ -49,7 +49,8 @@ namespace Elecciones
                 {
                     int nulos = int.Parse(tb_abstentionsVotes.Text);
 
-                    if (nulos.ToString().Length < 10 && nulos<=poblacion)
+                    if (nulos.ToString().Length < 10 && nulos<=poblacion)    
+
                     {
                         b_save.IsEnabled = true;
                         tb_nullVotes.Text = (poblacion-nulos).ToString();
