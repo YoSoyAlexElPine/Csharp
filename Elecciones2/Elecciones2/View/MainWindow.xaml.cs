@@ -11,7 +11,7 @@ using System.Windows.Input;
 namespace Elecciones
 {
 
-    //Ventana 
+    // Ventana 
 
     public partial class MainWindow : Window
     {
@@ -73,6 +73,7 @@ namespace Elecciones
         private void b_save_Click(object sender, RoutedEventArgs e)
         {
             tabItem2.IsEnabled = true;
+            tabControl.SelectedItem = tabItem2;
         }
 
         //Ventana 2

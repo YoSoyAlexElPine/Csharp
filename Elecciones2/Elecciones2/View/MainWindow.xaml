@@ -40,7 +40,7 @@
 
 
         <Grid Margin="0,100,0,0">
-            <TabControl TabStripPlacement="Left">
+            <TabControl x:Name="tabControl" TabStripPlacement="Left">
                 <TabItem Header="Previous Data" Style="{StaticResource EstiloTabItem}">
                     <StackPanel >
                         <Grid Width="668" Height="434" HorizontalAlignment="Left">
