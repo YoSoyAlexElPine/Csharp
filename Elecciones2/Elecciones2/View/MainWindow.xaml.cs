@@ -8,6 +8,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Collections.Generic;
 
 namespace Elecciones
 {
@@ -76,6 +77,7 @@ namespace Elecciones
         {
             tabItem2.IsEnabled = true;
             tabControl.SelectedItem = tabItem2;
+            b_save2.IsEnabled = false;
         }
 
         //Ventana 2
@@ -118,11 +120,8 @@ namespace Elecciones
         public void Save_Click(object Sender, RoutedEventArgs e)
         {
 
-            if (dg_partidos.Items.Count>1)
-            {
-
-
-            }
+            tabItem3.IsEnabled = true;
+            tabControl.SelectedItem = tabItem3;
 
         }
 
@@ -137,21 +136,24 @@ namespace Elecciones
         }
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            dg_partidos.Items.Clear();
-            b_new.IsEnabled = true;
+            // Obtener los elementos seleccionados en el DataGrid
+            List<Partido> selectedItems = new List<Partido>();
+            foreach (Partido item in dg_partidos.SelectedItems)
+            {
+                selectedItems.Add(item);
+            }
+
+            // Borrar los elementos seleccionados
+            foreach (Partido item in selectedItems)
+            {
+                dg_partidos.Items.Remove(item);
+            }
+
+            // Habilitar boton Si queda por lo menos 2 partidos
+            b_save2.IsEnabled = dg_partidos.Items.Count > 1;
         }
 
-        /*private bool verificacion2()
-        {
-            if (!string.IsNullOrEmpty(tb_team1.Text) && !string.IsNullOrEmpty(tb_team2.Text) && !string.IsNullOrEmpty(tb_team3.Text) && !string.IsNullOrEmpty(tb_team4.Text) && !string.IsNullOrEmpty(tb_team5.Text) && !string.IsNullOrEmpty(tb_team6.Text) && !string.IsNullOrEmpty(tb_team7.Text) && !string.IsNullOrEmpty(tb_team8.Text) && !string.IsNullOrEmpty(tb_team9.Text) && !string.IsNullOrEmpty(tb_team10.Text))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            };
-        }*/
+
 
         //Ventana 3
 
