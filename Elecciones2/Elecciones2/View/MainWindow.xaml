@@ -45,13 +45,17 @@
                     <StackPanel >
                         <Grid Width="668" Height="434" HorizontalAlignment="Left">
 
-                            <Label Content="Population" HorizontalAlignment="Left" Margin="181,111,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
-                            <Label Content="Abstenctions votes" HorizontalAlignment="Left" Margin="181,162,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
-                            <Label Content="Null votes" HorizontalAlignment="Left" Margin="181,217,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
-                            <TextBox x:Name="tb_population" HorizontalAlignment="Left" Margin="371,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="35" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" TextChanged="TB_Cambio" />
-                            <TextBox x:Name="tb_abstentionsVotes" HorizontalAlignment="Left" Margin="371,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="35" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" TextChanged="TB_Cambio" PreviewTextInput="Solo_Numeros" />
-                            <TextBox x:Name="tb_nullVotes" HorizontalAlignment="Left" Margin="371,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="35" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  TextChanged="TB_Cambio"/>
-                            <Button x:Name="b_save" Style="{StaticResource EstiloBoton}" Content="Save" HorizontalAlignment="Left" Margin="503,286,0,0" VerticalAlignment="Top" Height="29" Width="57" Click="b_save_Click"/>
+                            <Label Content="Population" HorizontalAlignment="Left" Margin="181,30,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+                            <Label Content="Votes&#xD;&#xA;" HorizontalAlignment="Left" Margin="181,81,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+                            <Label Content="Null votes" HorizontalAlignment="Left" Margin="181,136,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+                            <TextBox x:Name="tb_population" HorizontalAlignment="Left" Margin="371,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="35" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" TextChanged="TB_Cambio" />
+                            <TextBox x:Name="tb_votes" HorizontalAlignment="Left" Margin="371,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="35" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" TextChanged="TB_Cambio" PreviewTextInput="Solo_Numeros" />
+                            <TextBox x:Name="tb_nullVotes" HorizontalAlignment="Left" Margin="371,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="35" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  TextChanged="TB_Cambio"/>
+                            <Button x:Name="b_save" Style="{StaticResource EstiloBoton}" Content="Save" HorizontalAlignment="Left" Margin="503,339,0,0" VerticalAlignment="Top" Height="29" Width="57" Click="b_save_Click"/>
+                            <Label Content="Abstentions Votes" HorizontalAlignment="Left" Margin="181,192,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+                            <TextBox x:Name="tb_abstentionsVotes" HorizontalAlignment="Left" Margin="371,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="34" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  TextChanged="TB_Cambio"/>
+                            <Label Content="Valid Votes" HorizontalAlignment="Left" Margin="181,243,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+                            <TextBox x:Name="tb_validVotes" HorizontalAlignment="Left" Margin="371,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" Height="35" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"  TextChanged="TB_Cambio" RenderTransformOrigin="0.493,3.591"/>
 
                         </Grid>
                     </StackPanel>

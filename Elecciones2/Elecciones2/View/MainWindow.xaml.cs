@@ -18,18 +18,27 @@ namespace Elecciones
     public partial class MainWindow : Window
     {
 
-        public int poblacion = 6748929;
+        public int poblacion = 6748929,votes, nullVotes, absVotes, validVotes;
         public MainWindow()
         {
 
             InitializeComponent();
 
+            // Desabilito todos los elementos que no se puedan acceder
+
             tb_nullVotes.IsEnabled = false;
             tb_population.IsEnabled = false;
-            tb_population.Text = poblacion.ToString();
+            tb_abstentionsVotes.IsEnabled = false;
+            tb_validVotes.IsEnabled = false;
+
             b_save.IsEnabled = false;
+
             tabItem2.IsEnabled = false;
             tabItem3.IsEnabled = false;
+
+            // Establezco la pooblacion
+
+            tb_population.Text = poblacion.ToString();
 
         }
 
@@ -50,17 +59,26 @@ namespace Elecciones
             {
                 try
                 {
-                    int nulos = int.Parse(tb_abstentionsVotes.Text);
+                    int votes = int.Parse(tb_votes.Text);
 
-                    if (nulos.ToString().Length < 10 && nulos<=poblacion)    
-
+                    if (votes.ToString().Length < 10 && votes<= poblacion)    
                     {
                         b_save.IsEnabled = true;
-                        tb_nullVotes.Text = (poblacion-nulos).ToString();
+
+                        double votosNulos = (int.Parse(tb_votes.Text)/ 20);
+
+                        tb_nullVotes.Text = (Math.Truncate(votosNulos)).ToString();
+
+                        tb_abstentionsVotes.Text=(poblacion-votes).ToString();
+                        tb_validVotes.Text=(votes-votosNulos).ToString();
+
                     }
                     else
                     {
+                        tb_abstentionsVotes.Text = "-";
+                        tb_validVotes.Text = "-";
                         tb_nullVotes.Text = "-";
+
                         b_save.IsEnabled = false;
                     }
 
@@ -68,8 +86,12 @@ namespace Elecciones
                 }
                  catch (Exception ex)
                 {
-                    tb_nullVotes.Text = "-";
-                    b_save.IsEnabled = false;
+
+                tb_abstentionsVotes.Text = "-";
+                tb_validVotes.Text = "-";
+                tb_nullVotes.Text = "-";
+
+                b_save.IsEnabled = false;
             }
             }
 
@@ -78,6 +100,13 @@ namespace Elecciones
          * **/
         private void b_save_Click(object sender, RoutedEventArgs e)
         {
+
+            votes = int.Parse(tb_votes.Text);
+            absVotes = int.Parse(tb_abstentionsVotes.Text);
+            validVotes = int.Parse(tb_validVotes.Text);
+            nullVotes = int.Parse(tb_nullVotes.Text);
+
+
             tabItem2.IsEnabled = true;
             tabControl.SelectedItem = tabItem2;
             b_save2.IsEnabled = false;

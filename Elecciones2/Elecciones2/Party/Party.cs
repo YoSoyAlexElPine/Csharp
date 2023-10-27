@@ -8,48 +8,14 @@ namespace Elecciones2.Party
 {
     class Partido
     {
-        private int votos, escanos, validos, umbral, escanoUmbral;
+        private int votos, escanos;
         Boolean representacion;
         string resultado, nombre, presidente, acronimo;
-        public Partido(int votos, int validos, int umbral)
-        {
-            this.escanos = 0;
-            this.votos = votos;
-            this.validos = validos;
-            this.umbral = umbral;
-
-            escanoUmbral = validos / 37;
-
-            if (votos < umbral)
-            {
-                representacion = false;
-                resultado = "No representation";
-            }
-            else
-            {
-                representacion = true;
-            }
-
-            if (representacion)
-            {
-                for (int i = 2; i < 18; i++)
-                {
-                    if ((votos / i) > escanoUmbral)
-                    {
-                        escanos++;
-                    }
-                }
-                resultado = escanos.ToString();
-            }
-
-
-
-        }
-
-
-
+       
         public Partido(String presidente, String acronimo, String nombre)
         {
+            
+
             this.presidente = presidente;
             this.acronimo = acronimo;
             this.nombre = nombre;
