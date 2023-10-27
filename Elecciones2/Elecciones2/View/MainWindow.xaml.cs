@@ -73,6 +73,9 @@ namespace Elecciones
             }
             }
 
+        /*
+         * Boton de la primera ventana que nos manda a la segunda
+         * **/
         private void b_save_Click(object sender, RoutedEventArgs e)
         {
             tabItem2.IsEnabled = true;
@@ -83,17 +86,17 @@ namespace Elecciones
         //Ventana 2
 
 
-
+        /*
+        * Boton para agregar partido
+        * **/
         public void New_Click(object Sender, RoutedEventArgs e)
         {
 
-            if (dg_partidos.Items.Count <= 0)
-            {
-                b_save2.IsEnabled=false;
-            } else
-            {
-                b_save2.IsEnabled = true;
-            }
+            // Verificamos si por lo menos hay dos partidos
+
+            b_save2.IsEnabled=dg_partidos.Items.Count > 1;
+
+            //Cotrolamos que no se puedan añadir mas de 10 partidos
 
             if (dg_partidos.Items.Count < 10)
             { 
@@ -113,27 +116,33 @@ namespace Elecciones
                 }
             } else
             {
+                // Eliminamos la opcion de agregar mas partidos
+
                 b_new.IsEnabled = false;
+
+                // Mostramos mensaje
+                MessageBox.Show("Numero maximo de partidos alcanzado");
             }
 
         }
+
+        /*
+         * Boton Save de la tengunda pestaña
+         * **/
         public void Save_Click(object Sender, RoutedEventArgs e)
         {
-
+            // Habilitamos el boton
             tabItem3.IsEnabled = true;
+
+            // Entramos en la pestaña
             tabControl.SelectedItem = tabItem3;
 
         }
 
+        /*
+         * Boton Borrar elemetos seleccionados
+         * **/
 
-
-        private void Calculate_Click(object sender, RoutedEventArgs e)
-        {
-
-
-
-            tabItem3.IsEnabled = true;
-        }
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
             // Obtener los elementos seleccionados en el DataGrid
@@ -151,26 +160,16 @@ namespace Elecciones
 
             // Habilitar boton Si queda por lo menos 2 partidos
             b_save2.IsEnabled = dg_partidos.Items.Count > 1;
+
+            // Habilitamos el boton new en caso de que queden menos de 10 partidos
+
+            b_new.IsEnabled = dg_partidos.Items.Count < 10;
+
         }
 
 
 
         //Ventana 3
-
-
-        private void Button1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void Button2_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         /*
          * Conrolamos la tipica excepcino al hacer click en el datagrid

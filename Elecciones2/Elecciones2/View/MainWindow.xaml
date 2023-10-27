@@ -67,7 +67,7 @@
 
 
 
-                            <DataGrid x:Name="dg_partidos" Margin="19,63,260,0" AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="dg_partidos_SelectionChanged">
+                            <DataGrid x:Name="dg_partidos" Margin="19,18,260,73" AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="dg_partidos_SelectionChanged" Grid.RowSpan="2">
 
 
                                 <DataGrid.Columns>
@@ -81,18 +81,18 @@
                             </DataGrid>
 
 
-                            <Button x:Name="b_save2" Style="{StaticResource EstiloBoton}" Content="Save" HorizontalAlignment="Left" Margin="535,50,0,0" VerticalAlignment="Top" Height="29" Width="56" Click="Save_Click" Grid.Row="1"/>
+                            <Button x:Name="b_save2" Style="{StaticResource EstiloBoton}" Content="Save" HorizontalAlignment="Left" Margin="556,169,0,0" VerticalAlignment="Top" Height="29" Width="56" Click="Save_Click" Grid.Row="1"/>
 
-                            <Label x:Name="tv_acronym" Content="Acronym" Margin="442,70,159,121" HorizontalContentAlignment="Right"/>
-                            <Label x:Name="tv_party" HorizontalContentAlignment="Right" Content="Name of party" Margin="411,101,159,90"/>
-                            <Label x:Name="tv_president" HorizontalContentAlignment="Right" Content="President" Margin="442,132,159,59"/>
+                            <Label x:Name="tv_acronym" Content="Acronym" Margin="442,20,159,171" HorizontalContentAlignment="Right"/>
+                            <Label x:Name="tv_party" HorizontalContentAlignment="Right" Content="Name of party" Margin="410,52,159,139"/>
+                            <Label x:Name="tv_president" HorizontalContentAlignment="Right" Content="President" Margin="442,82,159,109"/>
 
-                            <TextBox x:Name="tb_acronym" HorizontalAlignment="Left" Margin="517,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="26" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"   />
-                            <TextBox x:Name="tb_party" HorizontalAlignment="Left" Margin="517,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="26" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"   />
-                            <TextBox x:Name="tb_president" HorizontalAlignment="Left" Margin="517,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Height="26" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"   />
+                            <TextBox x:Name="tb_acronym" HorizontalAlignment="Left" Margin="516,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Height="26" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"   />
+                            <TextBox x:Name="tb_party" HorizontalAlignment="Left" Margin="516,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Height="26" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"   />
+                            <TextBox x:Name="tb_president" HorizontalAlignment="Left" Margin="516,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Height="26" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"   />
 
-                            <Button x:Name="b_new" Style="{StaticResource EstiloBoton}" Content="New" HorizontalAlignment="Left" Margin="355,50,0,0" VerticalAlignment="Top" Height="29" Width="56" Click="New_Click" Grid.Row="1"/>
-                            <Button x:Name="b_delete" Style="{StaticResource EstiloBoton}" Content="Delete" HorizontalAlignment="Left" Margin="266,50,0,0" VerticalAlignment="Top" Height="29" Width="56" Click="Delete_Click" Grid.Row="1"/>
+                            <Button x:Name="b_new" Style="{StaticResource EstiloBoton}" Content="New" HorizontalAlignment="Left" Margin="556,139,0,0" VerticalAlignment="Top" Height="29" Width="56" Click="New_Click"/>
+                            <Button x:Name="b_delete" Style="{StaticResource EstiloBoton}" Content="Delete" HorizontalAlignment="Left" Margin="355,164,0,0" VerticalAlignment="Top" Height="29" Width="56" Click="Delete_Click" Grid.Row="1"/>
 
                         </Grid>
 
