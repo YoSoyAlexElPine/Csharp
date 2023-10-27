@@ -67,7 +67,7 @@
 
 
 
-                            <DataGrid x:Name="dg_partidos" Margin="19,63,260,0">
+                            <DataGrid x:Name="dg_partidos" Margin="19,63,260,0" AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="dg_partidos_SelectionChanged">
 
 
                                 <DataGrid.Columns>

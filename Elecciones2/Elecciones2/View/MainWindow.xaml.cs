@@ -1,6 +1,7 @@
 ﻿using System;
 
 using Elecciones2.Party;
+using Elecciones2.DataGrid;
 using Elecciones2.Functions;
 
 using System.Linq;
@@ -15,6 +16,7 @@ namespace Elecciones
 
     public partial class MainWindow : Window
     {
+
         public int poblacion = 6748929;
         public MainWindow()
         {
@@ -133,59 +135,6 @@ namespace Elecciones
 
             tabItem3.IsEnabled = true;
         }
-
-        private void TextBox_LostFocus2(object sender, RoutedEventArgs e)
-        {
-
-            /*if (verificacion2())
-            {
-
-                totalVotos = 0;
-
-                partidos[0] = new Partido(int.Parse(new string(tb_team1.Text.Where(char.IsDigit).ToArray())), validos, umbral);
-                partidos[1] = new Partido(int.Parse(new string(tb_team2.Text.Where(char.IsDigit).ToArray())), validos, umbral);
-                partidos[2] = new Partido(int.Parse(new string(tb_team3.Text.Where(char.IsDigit).ToArray())), validos, umbral);
-                partidos[3] = new Partido(int.Parse(new string(tb_team4.Text.Where(char.IsDigit).ToArray())), validos, umbral);
-                partidos[4] = new Partido(int.Parse(new string(tb_team5.Text.Where(char.IsDigit).ToArray())), validos, umbral);
-                partidos[5] = new Partido(int.Parse(new string(tb_team6.Text.Where(char.IsDigit).ToArray())), validos, umbral);
-                partidos[6] = new Partido(int.Parse(new string(tb_team7.Text.Where(char.IsDigit).ToArray())), validos, umbral);
-                partidos[7] = new Partido(int.Parse(new string(tb_team8.Text.Where(char.IsDigit).ToArray())), validos, umbral);
-                partidos[8] = new Partido(int.Parse(new string(tb_team9.Text.Where(char.IsDigit).ToArray())), validos, umbral);
-                partidos[9] = new Partido(int.Parse(new string(tb_team10.Text.Where(char.IsDigit).ToArray())), validos, umbral);
-                
-                seats1.Content = partidos[0].Resultado;
-                seats2.Content = partidos[1].Resultado;
-                seats3.Content = partidos[2].Resultado;
-                seats4.Content = partidos[3].Resultado;
-                seats5.Content = partidos[4].Resultado;
-                seats6.Content = partidos[5].Resultado;
-                seats7.Content = partidos[6].Resultado;
-                seats8.Content = partidos[7].Resultado;
-                seats9.Content = partidos[8].Resultado;
-                seats10.Content = partidos[9].Resultado;
-
-                for (int i = 0; i < 10; i++)
-                {
-                    totalVotos += partidos[i].Votos;
-                }
-
-                if (totalVotos < validos)
-                {
-                    Calculate.IsEnabled = true;
-                }
-                else
-                {
-                    Calculate.IsEnabled = false;
-                }
-
-
-            }
-            else
-            {
-                Calculate.IsEnabled = false;
-            }*/
-        }
-
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
             dg_partidos.Items.Clear();
@@ -221,6 +170,22 @@ namespace Elecciones
 
         }
 
+        /*
+         * Conrolamos la tipica excepcino al hacer click en el datagrid
+         * 
+         * **/
 
+        public void dg_partidos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción de manera adecuada (mostrar un mensaje de error, registrarla, etc.).
+            }
+
+        }
     }
 }
