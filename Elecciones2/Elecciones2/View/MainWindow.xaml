@@ -102,31 +102,26 @@
 
                     </StackPanel>
                 </TabItem>
-                <TabItem x:Name="tabItem3" Header="Simulation" Height="24" Margin="0,0,-2,0" Style="{StaticResource EstiloTabItem}">
+                <TabItem x:Name="tabItem3" Header="Simulation" Height="24" Margin="0,0,-2,0" Style="{StaticResource EstiloTabItem}" >
                     <Grid HorizontalAlignment="Left" Margin="0,0,0,-6" Width="671" Height="434">
-                        <Label Content="Team 1" HorizontalAlignment="Left" Margin="97,55,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                        <Label Content="Seats" HorizontalAlignment="Left" Margin="195,10,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                        <Label Content="Team 2" HorizontalAlignment="Left" Margin="97,85,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                        <Label Content="Team 3" HorizontalAlignment="Left" Margin="97,115,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                        <Label Content="Team 4" HorizontalAlignment="Left" Margin="96,144,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                        <Label Content="Team 5" HorizontalAlignment="Left" Margin="96,174,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                        <Label Content="Team 6" HorizontalAlignment="Left" Margin="97,204,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                        <Label Content="Team 7" HorizontalAlignment="Left" Margin="97,234,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                        <Label Content="Team 8" HorizontalAlignment="Left" Margin="97,264,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                        <Label Content="Team 9" HorizontalAlignment="Left" Margin="97,294,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                        <Label Content="Team 10" HorizontalAlignment="Left" Margin="96,324,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                        <Label x:Name="seats1" Content="Team 1" HorizontalAlignment="Left" Margin="190,55,0,0" VerticalAlignment="Top" FontSize="14"/>
-                        <Label x:Name="seats2" Content="Team 1" HorizontalAlignment="Left" Margin="190,85,0,0" VerticalAlignment="Top" FontSize="14"/>
-                        <Label x:Name="seats3" Content="Team 1" HorizontalAlignment="Left" Margin="190,115,0,0" VerticalAlignment="Top" FontSize="14"/>
-                        <Label x:Name="seats4" Content="Team 1" HorizontalAlignment="Left" Margin="190,144,0,0" VerticalAlignment="Top" FontSize="14"/>
-                        <Label x:Name="seats5" Content="Team 1" HorizontalAlignment="Left" Margin="190,174,0,0" VerticalAlignment="Top" FontSize="14"/>
-                        <Label x:Name="seats6" Content="Team 1" HorizontalAlignment="Left" Margin="190,204,0,0" VerticalAlignment="Top" FontSize="14"/>
-                        <Label x:Name="seats7" Content="Team 1" HorizontalAlignment="Left" Margin="190,234,0,0" VerticalAlignment="Top" FontSize="14"/>
-                        <Label x:Name="seats8" Content="Team 1" HorizontalAlignment="Left" Margin="190,264,0,0" VerticalAlignment="Top" FontSize="14"/>
-                        <Label x:Name="seats9" Content="Team 1" HorizontalAlignment="Left" Margin="190,294,0,0" VerticalAlignment="Top" FontSize="14"/>
-                        <Label x:Name="seats10" Content="Team 1" HorizontalAlignment="Left" Margin="190,324,0,0" VerticalAlignment="Top" FontSize="14"/>
+
+                        <Label Content="Seats" HorizontalAlignment="Left" Margin="251,10,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                        <TextBox x:Name="tb_seats" HorizontalAlignment="Left" Margin="112,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TB_Cambio3" PreviewTextInput="Solo_Numeros"/>
+                        <Button x:Name="b_simulate" Style="{StaticResource EstiloBoton}" Content="Simulate" HorizontalAlignment="Left" Margin="33,15,0,0" VerticalAlignment="Top" Height="18" Width="58" Click="b_simulate_Click"/>
+                        <DataGrid x:Name="dg_simulation" Margin="24,58,23,42" AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="dg_partidos_SelectionChanged" Grid.RowSpan="2">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Nombre}" Header="Party"/>
+                                <DataGridTextColumn Binding="{Binding Votos}" Header="Votes" Width="*"/>
+                                <DataGridTextColumn Binding="{Binding Seats}" Header="Seats" Width="*"/>
+                            </DataGrid.Columns>
+
+
+
+                        </DataGrid>
+
                     </Grid>
                 </TabItem>
+
             </TabControl>
         </Grid>
     </Grid>

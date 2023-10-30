@@ -1,5 +1,7 @@
 ﻿
 
+using System.Windows.Input;
+
 namespace Elecciones2.Functions
 {
     class Verificar

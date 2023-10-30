@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace Elecciones2.Party
 {
     class Partido
     {
-        private int votos, escanos;
+        int votos, seats;
         Boolean representacion;
         string resultado, nombre, presidente, acronimo;
        
@@ -21,16 +22,40 @@ namespace Elecciones2.Party
             this.nombre = nombre;
         }
 
+        public void calculateSeats(int validVotes,int seats,int votesSeat)
+        {
+            double umbral = (double)validVotes / seats;
+
+            for (int i = 2; i < 18; i++)
+            {
+                if (this.votos/i > votesSeat)
+                {
+                    this.seats++;
+                }
+            }
+
+
+            representacion = this.seats > umbral;
+
+
+        }
+
+        public void setVotos(int votos)
+        {
+            this.votos = votos;
+        }
 
 
         public int Votos
         {
             get { return votos; }
+            set { votos = value; }
         }
 
-        public int Escanos
+        public int Seats
         {
-            get { return escanos; }
+            set { seats = value; }
+            get { return seats; }
         }
 
         public string Resultado
@@ -55,4 +80,5 @@ namespace Elecciones2.Party
 
 
     }
+
 }

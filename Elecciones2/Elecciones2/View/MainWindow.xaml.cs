@@ -1,7 +1,6 @@
 ﻿using System;
 
 using Elecciones2.Party;
-using Elecciones2.DataGrid;
 using Elecciones2.Functions;
 
 using System.Linq;
@@ -17,6 +16,8 @@ namespace Elecciones
 
     public partial class MainWindow : Window
     {
+
+        // Variables
 
         public int poblacion = 6748929,votes, nullVotes, absVotes, validVotes;
         public MainWindow()
@@ -42,12 +43,9 @@ namespace Elecciones
 
         }
 
-
-
-
-        private void Solo_Numeros(object sender, TextCompositionEventArgs e)
+        public void Solo_Numeros(object sender, TextCompositionEventArgs e)
         {
-            
+
             // Usar una expresión regular para permitir solo números
             if (!System.Text.RegularExpressions.Regex.IsMatch(e.Text, "^[0-9]+$"))
             {
@@ -55,7 +53,10 @@ namespace Elecciones
             }
         }
 
-            private void TB_Cambio(object sender, RoutedEventArgs e)
+
+
+
+        private void TB_Cambio(object sender, RoutedEventArgs e)
             {
                 try
                 {
@@ -112,6 +113,11 @@ namespace Elecciones
             b_save2.IsEnabled = false;
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         //Ventana 2
 
 
@@ -121,9 +127,9 @@ namespace Elecciones
         public void New_Click(object Sender, RoutedEventArgs e)
         {
 
-            // Verificamos si por lo menos hay dos partidos
+            // Verificamos si por lo menos haya un partido
 
-            b_save2.IsEnabled=dg_partidos.Items.Count > 1;
+            b_save2.IsEnabled=dg_partidos.Items.Count > -1;
 
             //Cotrolamos que no se puedan añadir mas de 10 partidos
 
@@ -166,6 +172,55 @@ namespace Elecciones
             // Entramos en la pestaña
             tabControl.SelectedItem = tabItem3;
 
+            // Asignamos votos a partidos
+
+            int contador = 0;
+
+            foreach(Partido partido in  dg_partidos.Items)
+            {
+                contador++;
+                if (partido != null)
+                {
+
+
+                    switch (contador)
+                    {
+                        case 1:
+                            partido.Votos = (int)Math.Round(validVotes * 0.3525);
+                            break;
+                        case 2:
+                            partido.Votos = (int)Math.Round(validVotes * 0.2475);
+                            break;
+                        case 3:
+                            partido.Votos = (int)Math.Round(validVotes * 0.1575);
+                            break;
+                        case 4:
+                            partido.Votos = (int)Math.Round(validVotes * 0.1425);
+                            break;
+                        case 5:
+                            partido.Votos = (int)Math.Round(validVotes * 0.0375);
+                            break;
+                        case 6:
+                            partido.Votos = (int)Math.Round(validVotes * 0.035);
+                            break;
+                        case 7:
+                            partido.Votos = (int)Math.Round(validVotes * 0.015);
+                            break;
+                        case 8:
+                            partido.Votos = (int)Math.Round(validVotes * 0.005);
+                            break;
+                        case 9:
+                            partido.Votos = (int)Math.Round(validVotes * 0.0025);
+                            break;
+                        case 10:
+                            partido.Votos = (int)Math.Round(validVotes * 0.0025);
+                            break;
+
+
+                    }
+                }
+            }
+
         }
 
         /*
@@ -187,8 +242,8 @@ namespace Elecciones
                 dg_partidos.Items.Remove(item);
             }
 
-            // Habilitar boton Si queda por lo menos 2 partidos
-            b_save2.IsEnabled = dg_partidos.Items.Count > 1;
+            // Habilitar boton Si queda por lo menos hay un partido
+            b_save2.IsEnabled = dg_partidos.Items.Count > -1;
 
             // Habilitamos el boton new en caso de que queden menos de 10 partidos
 
@@ -199,6 +254,75 @@ namespace Elecciones
 
 
         //Ventana 3
+
+        public void b_simulate_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+
+
+                int seats = int.Parse(tb_seats.Text);
+
+                dg_simulation.Items.Clear();
+
+                List<int> datos = new List<int>();
+
+                // Almacen de datos
+
+                foreach (Partido partido in dg_partidos.Items)
+                {
+                    for (int i = 2; i < 18; i++)
+                    {
+                        datos.Add(partido.Votos / i);
+                    }
+                }
+
+                // Ordenamos lista
+
+                datos.Sort((a, b) => b.CompareTo(a));
+
+                // Calculo de Asientos
+
+                foreach (Partido partido in dg_partidos.Items)
+                {
+                    partido.Seats = 0;
+
+                    if (seats < datos.Count)
+                    {
+                        partido.calculateSeats(validVotes, seats, datos[seats]);
+                        dg_simulation.Items.Add(partido);
+                    }
+                    else
+                    {
+                        dg_simulation.Items.Clear();
+                    }
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrio un error inesperado");
+            }
+        }
+
+        // Cambio en el TextBox 3
+
+        private void TB_Cambio3(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int seats = int.Parse(tb_seats.Text);
+
+                b_simulate.IsEnabled = (seats>0);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                b_simulate.IsEnabled = false;
+            }
+        }
+
 
         /*
          * Conrolamos la tipica excepcino al hacer click en el datagrid
