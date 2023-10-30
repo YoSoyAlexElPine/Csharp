@@ -278,27 +278,38 @@ namespace Elecciones
                     }
                 }
 
+                // Votos en blanco
+
+                Partido blanco = new Partido("Blank ballots", "Blank ballots", "Blank ballots");
+                blanco.Votos =int.Parse(tb_nullVotes.Text);
+
+
+
                 // Ordenamos lista
 
                 datos.Sort((a, b) => b.CompareTo(a));
 
                 // Calculo de Asientos
 
-                foreach (Partido partido in dg_partidos.Items)
+                if (seats < datos.Count)
                 {
-                    partido.Seats = 0;
-
-                    if (seats < datos.Count)
+                    foreach (Partido partido in dg_partidos.Items)
                     {
+                        partido.Seats = 0;
                         partido.calculateSeats(validVotes, seats, datos[seats]);
                         dg_simulation.Items.Add(partido);
+
                     }
-                    else
-                    {
-                        dg_simulation.Items.Clear();
-                    }
+                    dg_simulation.Items.Add(blanco);
                 }
-            }catch (Exception ex)
+                else
+                {
+                    MessageBox.Show("To many seats");
+                    dg_simulation.Items.Clear();
+                }
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Ocurrio un error inesperado");
             }
