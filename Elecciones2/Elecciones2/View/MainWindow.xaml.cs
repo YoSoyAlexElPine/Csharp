@@ -306,6 +306,10 @@ namespace Elecciones
                 {
                     MessageBox.Show("To many seats");
                     dg_simulation.Items.Clear();
+
+
+
+
                 }
 
             }

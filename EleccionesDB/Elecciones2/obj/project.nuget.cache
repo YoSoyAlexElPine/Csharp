@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "P8lvtPes/QsAVDN6v/Fke1Lix7aeXhsPH+1x2+owrHY9+fZs6WQe/vGpscUY9inPPFMzpP7Jb9NVm5MxASZ7ng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alex\\OneDrive\\DAM\\Programacion\\c#\\EleccionesDB\\Elecciones2\\Elecciones2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alex\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\alex\\.nuget\\packages\\mysqlconnector\\2.3.1\\mysqlconnector.2.3.1.nupkg.sha512",
+    "C:\\Users\\alex\\.nuget\\packages\\system.diagnostics.diagnosticsource\\7.0.2\\system.diagnostics.diagnosticsource.7.0.2.nupkg.sha512",
+    "C:\\Users\\alex\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
