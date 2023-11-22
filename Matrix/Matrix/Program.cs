@@ -1,10 +1,4 @@
-﻿using System;
-using System.Data;
-using System.Numerics;
-using System.Threading;
-
-
-
+﻿
 class Program
 {
 
