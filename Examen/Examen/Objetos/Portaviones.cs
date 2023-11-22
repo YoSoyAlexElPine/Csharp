@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Examen.Objetos
 {
-    class Portaviones
+    class Portaviones : Barco
     {
+        public Portaviones() : base(4,"Portaviones")
+        {
+            
+        }
     }
 }

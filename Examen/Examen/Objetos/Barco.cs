@@ -9,9 +9,21 @@ namespace Examen.Objetos
 {
     class Barco
     {
-        int size;
-        public Barco(int size) {
-        this.size = size;
+
+        static int id;
+        int size,barcoId;
+        String nombre;
+
+        public Barco()
+        {
+            barcoId = id++;
+        }
+        public Barco(int size, String nombre) {
+
+            this.size = size;
+            this.nombre = nombre;
+            barcoId = id++;
+
         }
 
         public void cantar()
